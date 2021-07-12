@@ -23,9 +23,17 @@ function draw(){
 if(backgroundImg)
     background(backgroundImg)
     Engine.update(engine);
-
-    // write code to display time in correct format here
-
+ 
+ textSize(30);
+    if(hour>=12){
+    text("Time : "+ hour%12 +"pm",50,100);
+    }
+    else if(hour===0){
+        text("Time : 12am",50,100);
+    }
+    else{
+        text("Time : "+ hour%12 +"am",50,100);
+    }
 
 }
 
